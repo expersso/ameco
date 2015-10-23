@@ -4,7 +4,7 @@ Version: 0.1
 Date: 2015-10-23
 Authors@R: 'Eric Persson <expersso5@gmail.com> [aut,cre]'
 Description: Annual macro-economic database provided by the European Commission.
-License: CCO
+License: CC0
 LazyData: TRUE
 URL: http://github.com/expersso/ameco
 BugReports: http://github.com/expersso/ameco/issues
