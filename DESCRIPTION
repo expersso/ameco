@@ -8,3 +8,4 @@ License: CC0
 LazyData: TRUE
 URL: http://github.com/expersso/ameco
 BugReports: http://github.com/expersso/ameco/issues
+Depends: R(>= 2.10.0)
