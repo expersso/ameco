@@ -2,5 +2,6 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^README-.*\.png$
+^README_files$
 ^data-raw$
 ^cran-comments\.md$

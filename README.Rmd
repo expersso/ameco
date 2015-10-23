@@ -4,7 +4,7 @@ output:
     variant: markdown_github
 ---
 
-# AMECO dataset
+## AMECO Dataset
 
 This package contains the entire [European Commission Annual macro-economic 
 (AMECO) 
@@ -13,30 +13,45 @@ in a format amenable to analysis in R.
 
 The AMECO database was last updated: 5 May 2015.
 
-Install it from github with:
+## Simple example
 
-```{r, eval=FALSE}
-devtools::install_github("expersso/ameco")
-```
+The dataset is in a clean, long format:
 
-```{r head, eval=FALSE}
+```{r head}
+library(dplyr)
 library(ameco)
 head(ameco)
 ```
 
-```r
-'data.frame':	1842297 obs. of  8 variables:
- $ code       : chr  "EU28.1.0.0.0.NPTD" "EU15.1.0.0.0.NPTD" "EA19.1.0.0.0.NPTD" ...
- $ country    : chr  "European Union" "European Union (15 countries)" "Euro area" ...
- $ sub.chapter: chr  "01 Population" "01 Population" "01 Population" "01 Population" ...
- $ title      : chr  "Total population (National accounts)" ...
- $ unit       : chr  "1000 persons" "1000 persons" "1000 persons" "1000 persons" ...
- $ cntry      : chr  "EU28" "EU15" "EA19" "EA12" ...
- $ year       : num  1960 1960 1960 1960 1960 1960 1960 1960 1960 1960 ...
- $ value      : num  409087 316746 265004 252331 299392 ...
+Filtering with the `sub.chapter` variable allows you to easily find the variable
+of interest:
+
+```{r find_var}
+ameco %>% 
+  dplyr::filter(sub.chapter == "01 Population") %>% 
+  .$title %>% 
+  unique()
 ```
 
-This package is not affiliated with, nor endorsed by, the European Commission. I 
+Being interested in the total population of a few countries, we can easily
+subset the data and plot the results:
+
+```{r example, fig.width = 7, fig.height = 4}
+library(ggplot2)
+
+ameco %>% 
+  dplyr::filter(title == "Total population",
+         year == 2015,
+         cntry %in% c("USA", "JPN", "DEU", "FRA", "ESP", "ITA")) %>% 
+  ggplot(aes(x = reorder(country, -value), y = value / 1000)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  labs(x = NULL, y = "Population (millions)", title = "Total population")
+```
+
+## Disclaimer
+
+This package is not affiliated with, nor endorsed by, the European Commission. I
 aim to update it whenever the AMECO database is updated. If you ever see that it
 is out-of-date, don't hesitate to send a pull request and/or remind me to update
 it.

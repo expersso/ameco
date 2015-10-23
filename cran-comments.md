@@ -2,7 +2,15 @@
 * Windows 7 x64, R 3.2.2
 * ubuntu 12.04, R 3.2.2
 
-## R CMD check results
+## Changes in second submission:
+
+* Authors@R field now a call to person()
+* The Title field corrected (now in title case)
+* Added vignette
+
+## First submission comments:
+
+### R CMD check results
 There were no ERRORs or WARNINGs. 
 
 There was 1 NOTE:

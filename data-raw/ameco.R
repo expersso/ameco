@@ -19,7 +19,10 @@ all_files <- lapply(files, function(file) {
              stringsAsFactors = FALSE, strip.white = TRUE)
 })
 
+unlink(temp_dir, recursive = TRUE)
+
 ameco <- do.call(rbind, all_files)
+ameco <- tbl_df(ameco)
 ameco <- ameco[, -ncol(ameco)] # Drop stray/empty last column
 names(ameco) <- tolower(names(ameco))
 
