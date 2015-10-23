@@ -1,3 +1,5 @@
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
+
 AMECO Dataset
 -------------
 
@@ -59,7 +61,7 @@ ameco %>%
   labs(x = NULL, y = "Population (millions)", title = "Total population")
 ```
 
-![](README_files/figure-markdown_github/example-1.png)
+![](example-1.png)
 
 Disclaimer
 ----------
