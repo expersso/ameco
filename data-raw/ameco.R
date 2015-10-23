@@ -1,8 +1,10 @@
+library(tidyr) # gather()
+library(dplyr) # starts_with()
 
 # Get all files -----------------------------------------------------------
 
-temp_zip <- tempfile(fileext = ".zip")
 temp_dir <- tempdir()
+temp_zip <- tempfile(tmpdir = temp_dir, fileext = ".zip")
 
 url <- "http://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco0.zip"
 download.file(url, temp_zip, mode = "wb")
@@ -10,24 +12,24 @@ unzip(temp_zip, exdir = temp_dir)
 
 files <- dir(temp_dir, "*.TXT", full.names = TRUE)
 
-# Read files --------------------------------------------------------------
+# Read files, bind together, clean, save ----------------------------------
 
 all_files <- lapply(files, function(file) {
   read.table(file, TRUE, ";", fill = TRUE,
              stringsAsFactors = FALSE, strip.white = TRUE)
 })
 
-df <- do.call(rbind, all_files)
-df <- df[, -ncol(df)] # Drop stray/empty last column
-names(df) <- tolower(names(df))
+ameco <- do.call(rbind, all_files)
+ameco <- ameco[, -ncol(ameco)] # Drop stray/empty last column
+names(ameco) <- tolower(names(ameco))
 
 # Extract short country names
-df$cntry <- regmatches(df$code,regexpr("^[[:alnum:]]+", df$code))
+ameco$cntry <- regmatches(ameco$code,regexpr("^[[:alnum:]]+", ameco$code))
 
 # Convert to long format
-df <- gather(df, key = year, value = value, starts_with("x"))
-df$year <- gsub("x", "", df$year)
-df$year <- as.numeric(df$year)
-df$value <- suppressWarnings(as.numeric(df$value))
+ameco <- gather(ameco, key = year, value = value, starts_with("x"))
+ameco$year <- gsub("x", "", ameco$year)
+ameco$year <- as.numeric(ameco$year)
+ameco$value <- suppressWarnings(as.numeric(ameco$value))
 
-save(df, file = "data/ameco.RData", compress = "xz")
+save(ameco, file = "data/ameco.RData", compress = "xz")
