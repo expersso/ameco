@@ -1,5 +1,7 @@
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
 
+[![](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
+
 AMECO Dataset
 -------------
 

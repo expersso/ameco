@@ -5,7 +5,9 @@ output:
 ---
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
+
 [![](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
+
 ## AMECO Dataset
 
 This package contains the entire [European Commission Annual macro-economic 
