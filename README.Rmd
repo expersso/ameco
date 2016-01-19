@@ -4,6 +4,10 @@ output:
     variant: markdown_github
 ---
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
+
+[![](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
+
 ## AMECO Dataset
 
 This package contains the entire [European Commission Annual macro-economic 
@@ -16,6 +20,10 @@ The AMECO database was last updated: 5 May 2015.
 ## Simple example
 
 The dataset is in a clean, long format:
+
+```{r options, echo = FALSE}
+knitr::opts_chunk$set(fig.path = "")
+```
 
 ```{r head}
 library(dplyr)
