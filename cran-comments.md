@@ -4,6 +4,10 @@
 
 ### R CMD check results
 
+## Second submission changes
+
+* Add xml2 to SUGGESTS to fix failing unit test
+
 There were 0 ERRORs, 0 WARNINGS, 1 NOTE:
 
 * checking installed package size ... NOTE
