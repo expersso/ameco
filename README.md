@@ -7,6 +7,16 @@ This package contains the entire [European Commission Annual macro-economic (AME
 
 The AMECO database was last updated: 5 November 2015.
 
+Install it from either CRAN or Github:
+
+``` r
+# From CRAN
+install.packages("ameco")
+
+# From Github
+devtools::install_github("expersso/ameco")
+```
+
 Simple example
 --------------
 

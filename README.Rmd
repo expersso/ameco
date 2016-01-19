@@ -17,6 +17,16 @@ in a format amenable to analysis in R.
 
 The AMECO database was last updated: 5 November 2015.
 
+Install it from either CRAN or Github:
+
+```{r install, eval=FALSE}
+# From CRAN
+install.packages("ameco")
+
+# From Github
+devtools::install_github("expersso/ameco")
+```
+
 ## Simple example
 
 The dataset is in a clean, long format:

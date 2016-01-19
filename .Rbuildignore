@@ -1,7 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
-^README-.*\.png$
+^.*\.png$
 ^README_files$
 ^data-raw$
 ^cran-comments\.md$
+^\.travis\.yml$
