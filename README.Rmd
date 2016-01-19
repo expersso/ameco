@@ -4,9 +4,9 @@ output:
     variant: markdown_github
 ---
 
+[![Travis-CI Build Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
-
-[![](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
+[![CRAN_Logs_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
 
 ## AMECO Dataset
 
@@ -15,7 +15,7 @@ This package contains the entire [European Commission Annual macro-economic
 database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) 
 in a format amenable to analysis in R.
 
-The AMECO database was last updated: 5 May 2015.
+The AMECO database was last updated: 5 November 2015.
 
 ## Simple example
 
