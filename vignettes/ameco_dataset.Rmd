@@ -16,7 +16,7 @@ This package contains the entire [European Commission Annual macro-economic
 database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) 
 in a format amenable to analysis in R.
 
-The AMECO database was last updated: 5 May 2015.
+The AMECO database was last updated: 5 November 2015.
 
 ## Simple example
 
@@ -33,7 +33,7 @@ of interest:
 
 ```{r find_var}
 ameco %>% 
-  dplyr::filter(sub.chapter == "01 Population") %>% 
+  filter(sub.chapter == "01 Population") %>% 
   .$title %>% 
   unique()
 ```
