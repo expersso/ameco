@@ -1,6 +1,6 @@
 Package: ameco
 Title: European Commission Annual Macro-Economic (AMECO) Database
-Version: 0.2
+Version: 0.2.1.999
 Date: 2016-01-19
 Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
     role = c("aut", "cre"))
