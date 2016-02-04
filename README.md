@@ -1,13 +1,21 @@
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
-
-[![](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
-
 AMECO Dataset
--------------
+=============
+
+[![Travis-CI Build Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco) [![CRAN\_Logs\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
 
 This package contains the entire [European Commission Annual macro-economic (AMECO) database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) in a format amenable to analysis in R.
 
-The AMECO database was last updated: 5 May 2015.
+The AMECO database was last updated: 5 November 2015.
+
+Install it from either CRAN or Github:
+
+``` r
+# From CRAN
+install.packages("ameco")
+
+# From Github
+devtools::install_github("expersso/ameco")
+```
 
 Simple example
 --------------
@@ -16,6 +24,20 @@ The dataset is in a clean, long format:
 
 ``` r
 library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+    ## 
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+    ## 
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
 library(ameco)
 head(ameco)
 ```
@@ -52,7 +74,11 @@ Being interested in the total population of a few countries, we can easily subse
 
 ``` r
 library(ggplot2)
+```
 
+    ## Warning: package 'ggplot2' was built under R version 3.2.3
+
+``` r
 ameco %>% 
   dplyr::filter(title == "Total population",
          year == 2015,
