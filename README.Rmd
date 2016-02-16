@@ -32,7 +32,7 @@ devtools::install_github("expersso/ameco")
 The dataset is in a clean, long format:
 
 ```{r options, echo = FALSE}
-knitr::opts_chunk$set(fig.path = "")
+knitr::opts_chunk$set(fig.path = "", message = FALSE, warning = FALSE)
 ```
 
 ```{r head}
@@ -46,7 +46,7 @@ of interest:
 
 ```{r find_var}
 ameco %>% 
-  dplyr::filter(sub.chapter == "01 Population") %>% 
+  filter(sub.chapter == "01 Population") %>% 
   .$title %>% 
   unique()
 ```
@@ -66,6 +66,7 @@ ameco %>%
   theme_bw() +
   labs(x = NULL, y = "Population (millions)", title = "Total population")
 ```
+
 
 ## Disclaimer
 
