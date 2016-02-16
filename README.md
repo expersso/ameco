@@ -62,7 +62,7 @@ Being interested in the total population of a few countries, we can easily subse
 library(ggplot2)
 
 ameco %>% 
-  dplyr::filter(title == "Total population",
+  filter(title == "Total population",
          year == 2015,
          cntry %in% c("USA", "JPN", "DEU", "FRA", "ESP", "ITA")) %>% 
   ggplot(aes(x = reorder(country, -value), y = value / 1000)) +
