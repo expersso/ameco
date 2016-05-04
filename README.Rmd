@@ -7,8 +7,8 @@ output:
 # AMECO Dataset
 
 [![Travis-CI Build Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco)
-[![CRAN_Logs_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ameco)](https://cran.r-project.org/package=ameco)
+[![CRAN_Logs_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](https://cran.r-project.org/package=ameco)
 
 This package contains the entire [European Commission Annual macro-economic 
 (AMECO) 

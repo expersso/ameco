@@ -1,7 +1,7 @@
 AMECO Dataset
 =============
 
-[![Travis-CI Build Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](http://cran.r-project.org/package=ameco) [![CRAN\_Logs\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](http://cran.r-project.org/web/packages/ameco)
+[![Travis-CI Build Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](https://cran.r-project.org/package=ameco) [![CRAN\_Logs\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](https://cran.r-project.org/package=ameco)
 
 This package contains the entire [European Commission Annual macro-economic (AMECO) database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) in a format amenable to analysis in R.
 
@@ -71,7 +71,7 @@ ameco %>%
   labs(x = NULL, y = "Population (millions)", title = "Total population")
 ```
 
-![](example-1.png)
+![](example-1.png)<!-- -->
 
 Disclaimer
 ----------
