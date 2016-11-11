@@ -2,18 +2,13 @@
 * Windows 7 x64, R 3.2.2
 * ubuntu 12.04, R 3.2.2
 
-## Changes in version 0.2.3:
+## Changes in version 0.2.4:
 
 * Updated data
 
 ### R CMD check results
 
-There were 0 ERRORs, 0 WARNINGS, 2 NOTEs:
-
-* Possibly mis-spelled words in DESCRIPTION:
-  AMECO (2:51)
-  
-  Not actually misspelled.
+There were 0 ERRORs, 0 WARNINGS, 1 NOTE:
 
 * checking installed package size ... NOTE
   installed size is 15.1Mb

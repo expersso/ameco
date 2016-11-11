@@ -5,7 +5,7 @@ AMECO Dataset
 
 This package contains the entire [European Commission Annual macro-economic (AMECO) database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) in a format amenable to analysis in R.
 
-The AMECO database was last updated: 3 May 2016.
+The AMECO database was last updated: 9 November 2016.
 
 Install it from either CRAN or Github:
 
@@ -28,18 +28,17 @@ library(ameco)
 head(ameco)
 ```
 
-    ## Source: local data frame [6 x 8]
-    ## 
+    ## # A tibble: 6 × 8
     ##                code                           country   sub.chapter
-    ##               (chr)                             (chr)         (chr)
+    ##               <chr>                             <chr>         <chr>
     ## 1 EU28.1.0.0.0.NPTD                    European Union 01 Population
     ## 2 EU15.1.0.0.0.NPTD     European Union (15 countries) 01 Population
     ## 3 EA19.1.0.0.0.NPTD                         Euro area 01 Population
     ## 4 EA12.1.0.0.0.NPTD          Euro area (12 countries) 01 Population
     ## 5 DU15.1.0.0.0.NPTD EU15 (including D_W West-Germany) 01 Population
     ## 6 DA12.1.0.0.0.NPTD EA12 (including D_W West-Germany) 01 Population
-    ## Variables not shown: title (chr), unit (chr), cntry (chr), year (dbl),
-    ##   value (dbl)
+    ## # ... with 5 more variables: title <chr>, unit <chr>, cntry <chr>,
+    ## #   year <dbl>, value <dbl>
 
 Filtering with the `sub.chapter` variable allows you to easily find the variable of interest:
 
@@ -71,7 +70,7 @@ ameco %>%
   labs(x = NULL, y = "Population (millions)", title = "Total population")
 ```
 
-![](example-1.png)<!-- -->
+![](example-1.png)
 
 Disclaimer
 ----------
