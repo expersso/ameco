@@ -3,11 +3,11 @@ library(dplyr) # starts_with()
 
 # Get all files -----------------------------------------------------------
 
-temp_dir <- tempdir()
-temp_zip <- tempfile(tmpdir = temp_dir, fileext = ".zip")
+# Manually download zip from
+# https://ec.europa.eu/info/files/all-zipped-text-files_en
 
-url <- "http://ec.europa.eu/economy_finance/db_indicators/ameco/documents/ameco0.zip"
-download.file(url, temp_zip, mode = "wb")
+temp_dir <- tempdir()
+# temp_zip <- path/to/downloaded/zip
 unzip(temp_zip, exdir = temp_dir)
 
 files <- dir(temp_dir, "*.TXT", full.names = TRUE)
