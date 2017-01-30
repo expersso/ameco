@@ -2,9 +2,9 @@
 * Windows 7 x64, R 3.2.2
 * ubuntu 12.04, R 3.2.2
 
-## Changes in version 0.2.4:
+## Changes in version 0.2.5:
 
-* Updated data
+* Updated failing test
 
 ### R CMD check results
 
