@@ -5,7 +5,7 @@ AMECO Dataset
 
 This package contains the entire [European Commission Annual macro-economic (AMECO) database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) in a format amenable to analysis in R.
 
-The AMECO database was last updated: 9 November 2016.
+The AMECO database was last updated: 13 February 2017.
 
 Install it from either CRAN or Github:
 

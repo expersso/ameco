@@ -7,7 +7,7 @@ library(dplyr) # starts_with()
 # https://ec.europa.eu/info/files/all-zipped-text-files_en
 
 temp_dir <- tempdir()
-# temp_zip <- path/to/downloaded/zip
+# temp_zip <- "downloads_dir\\ameco0.zip"
 unzip(temp_zip, exdir = temp_dir)
 
 files <- dir(temp_dir, "*.TXT", full.names = TRUE)

@@ -13,5 +13,5 @@ test_that("Test that current version is still latest version", {
     sub("Last update: ", "", .) %>%
     as.Date("%d %b %Y")
 
-  expect_equal(last_update, as.Date("2016-11-09"))
+  expect_equal(last_update, as.Date("2017-02-13"))
 })
