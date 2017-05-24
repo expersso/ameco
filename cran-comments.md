@@ -2,7 +2,7 @@
 * Windows 7 x64, R 3.2.2
 * ubuntu 12.04, R 3.2.2
 
-## Changes in version 0.2.6:
+## Changes in version 0.2.7:
 
 * Updated failing test
 
