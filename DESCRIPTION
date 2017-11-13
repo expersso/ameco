@@ -1,7 +1,7 @@
 Package: ameco
 Title: European Commission Annual Macro-Economic (AMECO) Database
-Version: 0.2.7
-Date: 2017-05-24
+Version: 0.2.8
+Date: 2017-11-13
 Authors@R: person("Eric", "Persson", email = "expersso5@gmail.com",
     role = c("aut", "cre"))
 Description: Annual macro-economic database provided by the European Commission.
@@ -19,4 +19,4 @@ Suggests:
     testthat,
     xml2
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
