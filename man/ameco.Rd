@@ -26,4 +26,8 @@ ameco
 The dataset contains the tntire annual macrro-economic database provided by
 the European Commission. Last update: 9 November 2017.
 }
+\examples{
+{str(ameco)}
+
+}
 \keyword{datasets}

@@ -1,7 +1,7 @@
 #' European Commission Annual macro-economic database (AMECO)
 #'
 #' The dataset contains the tntire annual macrro-economic database provided by
-#' the European Commission. Last update: 9 November 2017.
+#' the European Commission. Last update: 3 May 2018.
 #'
 #' @format A data frame with eight variables:
 #' \describe{
@@ -18,5 +18,6 @@
 #'
 #' For further details, see
 #' \url{http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm}
+#' @examples{str(ameco)}
 #'
 "ameco"
