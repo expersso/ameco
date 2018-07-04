@@ -1,11 +1,17 @@
 AMECO Dataset
 =============
 
-[![Travis-CI Build Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](https://cran.r-project.org/package=ameco) [![CRAN\_Logs\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](https://cran.r-project.org/package=ameco)
+[![Travis-CI Build
+Status](https://travis-ci.org/expersso/ameco.svg?branch=master)](https://travis-ci.org/expersso/ameco)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ameco)](https://cran.r-project.org/package=ameco)
+[![CRAN\_Logs\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/ameco)](https://cran.r-project.org/package=ameco)
 
-This package contains the entire [European Commission Annual macro-economic (AMECO) database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm) in a format amenable to analysis in R.
+This package contains the entire [European Commission Annual
+macro-economic (AMECO)
+database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm)
+in a format amenable to analysis in R.
 
-The AMECO database was last updated: 9 November 2017.
+The AMECO database was last updated: 3 May 2018.
 
 Install it from either CRAN or Github:
 
@@ -29,18 +35,17 @@ head(ameco)
 ```
 
     ## # A tibble: 6 x 8
-    ##                code                           country   sub.chapter
-    ##               <chr>                             <chr>         <chr>
-    ## 1 EU28.1.0.0.0.NPTD                    European Union 01 Population
-    ## 2 EU15.1.0.0.0.NPTD     European Union (15 countries) 01 Population
-    ## 3 EA19.1.0.0.0.NPTD                         Euro area 01 Population
-    ## 4 EA12.1.0.0.0.NPTD          Euro area (12 countries) 01 Population
-    ## 5 DU15.1.0.0.0.NPTD EU15 (including D_W West-Germany) 01 Population
-    ## 6 DA12.1.0.0.0.NPTD EA12 (including D_W West-Germany) 01 Population
-    ## # ... with 5 more variables: title <chr>, unit <chr>, cntry <chr>,
-    ## #   year <dbl>, value <dbl>
+    ##   code              country   sub.chapter  title  unit  cntry  year  value
+    ##   <chr>             <chr>     <chr>        <chr>  <chr> <chr> <dbl>  <dbl>
+    ## 1 EU28.1.0.0.0.NPTD European~ 01 Populati~ Total~ 1000~ EU28   1960 409118
+    ## 2 EU15.1.0.0.0.NPTD European~ 01 Populati~ Total~ 1000~ EU15   1960 316765
+    ## 3 EA19.1.0.0.0.NPTD Euro area 01 Populati~ Total~ 1000~ EA19   1960 265029
+    ## 4 EA12.1.0.0.0.NPTD Euro are~ 01 Populati~ Total~ 1000~ EA12   1960 252350
+    ## 5 DU15.1.0.0.0.NPTD EU15 (in~ 01 Populati~ Total~ 1000~ DU15   1960 299421
+    ## 6 DA12.1.0.0.0.NPTD EA12 (in~ 01 Populati~ Total~ 1000~ DA12   1960 235006
 
-Filtering with the `sub.chapter` variable allows you to easily find the variable of interest:
+Filtering with the `sub.chapter` variable allows you to easily find the
+variable of interest:
 
 ``` r
 ameco %>% 
@@ -55,7 +60,8 @@ ameco %>%
     ## [4] "Population: 15 to 64 years"          
     ## [5] "Population: 65 years and over"
 
-Being interested in the total population of a few countries, we can easily subset the data and plot the results:
+Being interested in the total population of a few countries, we can
+easily subset the data and plot the results:
 
 ``` r
 library(ggplot2)
@@ -75,4 +81,7 @@ ameco %>%
 Disclaimer
 ----------
 
-This package is not affiliated with, nor endorsed by, the European Commission. I aim to update it whenever the AMECO database is updated. If you ever see that it is out-of-date, don't hesitate to send a pull request and/or remind me to update it.
+This package is not affiliated with, nor endorsed by, the European
+Commission. I aim to update it whenever the AMECO database is updated.
+If you ever see that it is out-of-date, don’t hesitate to send a pull
+request and/or remind me to update it.
