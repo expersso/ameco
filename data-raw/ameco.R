@@ -4,7 +4,7 @@ library(dplyr) # starts_with()
 # Get all files -----------------------------------------------------------
 
 # Manually download zip from
-# https://ec.europa.eu/info/files/all-zipped-text-files_en
+# https://ec.europa.eu/info/business-economy-euro/indicators-statistics/economic-databases/macro-economic-database-ameco/download-annual-data-set-macro-economic-database-ameco_en
 
 temp_dir <- tempdir()
 # temp_zip <- "downloads_dir\\ameco0.zip"
