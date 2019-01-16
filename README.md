@@ -11,8 +11,6 @@ macro-economic (AMECO)
 database](http://ec.europa.eu/economy_finance/db_indicators/ameco/index_en.htm)
 in a format amenable to analysis in R.
 
-The AMECO database was last updated: 3 May 2018.
-
 Install it from either CRAN or Github:
 
 ``` r
